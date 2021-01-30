@@ -4,8 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use LaravelFillableRelations\Eloquent\Concerns\HasFillableRelations;
 
 class Localization extends Model
 {
-    use HasFactory;
+    function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
 }

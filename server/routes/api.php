@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\testController;
+use App\Http\Controllers\ProjectsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,4 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('test', [testController::class, 'index']);
+Route::get('projects', [ProjectsController::class, 'index']);
+Route::get('projects/{id}', [ProjectsController::class, 'show']);
+Route::post('projects', [ProjectsController::class, 'create']);
+Route::put('projects/{id}', [ProjectsController::class, 'update']);
+Route::delete('projects/{id}', [ProjectsController::class, 'delete']);

@@ -13,24 +13,17 @@ class AddKeysTables extends Migration
      */
     public function up()
     {
-        Schema::table('points', function (Blueprint $table) {
-            $table->foreignId('point_id')
-                ->constrained()
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-        });
+        // Schema::table('points', function (Blueprint $table) {
+        //     $table->foreignId('point_id')
+        //         ->constrained()
+        //         ->onUpdate('cascade')
+        //         ->onDelete('cascade');
+        // });
 
-        Schema::table('localizations', function (Blueprint $table) {
-            $table->unsignedBigInteger('point_id');
-            $table->foreign('point_id')->references('id')->on('points');
-        });
-
-        Schema::table('localizations', function (Blueprint $table) {
-            $table->foreignId('localization_id')
-                ->constrained()
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-        });
+        // Schema::table('localizations', function (Blueprint $table) {
+        //     $table->unsignedBigInteger('point_id');
+        //     $table->foreign('point_id')->references('id')->on('points');
+        // });
         
         Schema::table('projects', function (Blueprint $table) {
             $table->unsignedBigInteger('localization_id');
