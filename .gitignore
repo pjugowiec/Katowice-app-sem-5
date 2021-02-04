@@ -12,5 +12,5 @@
 /serverPhp/.phpunit
 /serverPhp/.phpunit.result.cache
 /serverPhp/phpunit.xml
-
+/gui/node_modules
 

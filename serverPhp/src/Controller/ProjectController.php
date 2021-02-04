@@ -99,12 +99,13 @@ class ProjectController extends ApiController
             $project->setDescription($description);
         }
 
-        $localizationId = $request->get('localization_id');
+        $localizationId = $request->get('district');
         if(!$localizationId) {
-            return $this->respondValidationError('Localization id can not be null!');
+            return $this->respondValidationError('District can not be null!');
         }
 
-        $localization = $localizationRepository->find($request->get('localization_id'));
+        $localization = $localizationRepository->findBy(array('district' => $request->get('district')))[0];
+
         if(!$localization) {
             return $this->respondNotFound('Localization not found');
         }
