@@ -34,12 +34,11 @@ class Localization
      */
     private $coordinates;
 
-//    /**
-//     * @var
-//     *
-//     * @ORM\OneToMany(targetEntity="App\Entity\Project", mappedBy="localization", cascade={"persist"})
-//     */
-//    private $projects;
+    /**
+     *
+     * @ORM\OneToMany(targetEntity="App\Entity\Project", mappedBy="localization", cascade={"persist"})
+     */
+    private $projects;
 
     public function __construct()
     {
@@ -108,6 +107,36 @@ class Localization
     public function setCoordinates($coordinates): void
     {
         $this->coordinates = $coordinates;
+    }
+
+    /**
+     * @return Collection|Project[]
+     */
+    public function getProjects(): Collection
+    {
+        return $this->projects;
+    }
+
+    public function addProject(Project $project): self
+    {
+        if (!$this->projects->contains($project)) {
+            $this->projects[] = $project;
+            $project->setLocalization($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProject(Project $project): self
+    {
+        if ($this->projects->removeElement($project)) {
+            // set the owning side to null (unless already changed)
+            if ($project->getLocalization() === $this) {
+                $project->setLocalization(null);
+            }
+        }
+
+        return $this;
     }
 
     

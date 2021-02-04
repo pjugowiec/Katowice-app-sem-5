@@ -277,6 +277,6 @@ class __TwigTemplate_bdc0245905424aa5da6963a9c6172fcdc82fab174bcd8ae10719ad9b9e8
     {% set attr = attr|merge({class: (attr.class|default('') ~ ' button')|trim}) %}
     {{- parent() -}}
 {%- endblock button_widget %}
-", "foundation_6_layout.html.twig", "/Users/patrykjugowiec/Desktop/server/vendor/symfony/twig-bridge/Resources/views/Form/foundation_6_layout.html.twig");
+", "foundation_6_layout.html.twig", "/Users/patrykjugowiec/Desktop/Projekty/Katowice-app-sem-5/serverPhp/vendor/symfony/twig-bridge/Resources/views/Form/foundation_6_layout.html.twig");
     }
 }

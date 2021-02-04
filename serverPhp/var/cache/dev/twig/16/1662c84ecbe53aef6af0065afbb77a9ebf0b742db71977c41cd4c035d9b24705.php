@@ -81,6 +81,6 @@ class __TwigTemplate_bf60ec3858a42737bed77b9962bcdebfb4fd92468a37ecf30492b310686
     public function getSourceContext()
     {
         return new Source("{% block panel '' %}
-", "@WebProfiler/Profiler/ajax_layout.html.twig", "/Users/patrykjugowiec/Desktop/server/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/ajax_layout.html.twig");
+", "@WebProfiler/Profiler/ajax_layout.html.twig", "/Users/patrykjugowiec/Desktop/Projekty/Katowice-app-sem-5/serverPhp/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/ajax_layout.html.twig");
     }
 }

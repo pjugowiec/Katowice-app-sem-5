@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Localization;
 use App\Entity\Project;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -19,32 +20,36 @@ class ProjectRepository extends ServiceEntityRepository
         parent::__construct($registry, Project::class);
     }
 
-    // /**
-    //  * @return Project[] Returns an array of Project objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function transform(Project $project): array
     {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+        return [
+            'id'    => (int) $project->getId(),
+            'name' => (string) $project->getName(),
+            'description' => (string) $project->getDescription(),
+            'localization' => $this->transformLocalization($project->getLocalization())
 
-    /*
-    public function findOneBySomeField($value): ?Project
-    {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        ];
     }
-    */
+
+    public function transformAll(): array
+    {
+        $projects = $this->findAll();
+        $returnArray = [];
+
+        foreach ($projects as $project) {
+            $returnArray[] = $this->transform($project);
+        }
+
+        return $returnArray;
+    }
+
+    public function transformLocalization(Localization $localization): array
+    {
+        return [
+            'id'    => (int) $localization->getId(),
+            'city' => (string) $localization->getCity(),
+            'district' => (string) $localization->getDistrict(),
+            'coordinates' => (string) $localization->getCoordinates()
+        ];
+    }
 }

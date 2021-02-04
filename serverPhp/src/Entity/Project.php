@@ -32,12 +32,12 @@ class Project
      */
     private $description;
 
-//    /**
-//     *
-//     * @ORM\ManyToOne(targetEntity="App\Entity\Localization", inversedBy="projects")
-//     * @ORM\JoinColumn(name="localization_id", nullable=false, referencedColumnName="id")
-//     */
-//    private $localization;
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="App\Entity\Localization", inversedBy="projects")
+     * @ORM\JoinColumn(name="localization_id", nullable=false, referencedColumnName="id")
+     */
+    private $localization;
 
 
 
@@ -72,6 +72,18 @@ class Project
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getLocalization(): ?Localization
+    {
+        return $this->localization;
+    }
+
+    public function setLocalization(?Localization $localization): self
+    {
+        $this->localization = $localization;
 
         return $this;
     }

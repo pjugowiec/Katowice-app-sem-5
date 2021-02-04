@@ -299,6 +299,6 @@ class __TwigTemplate_1c40c658b2b6cdf17e977ff5414626f3d31ce5cdb2f5c94920b610254b8
         {{- form_rest(form) -}}
     </table>
 {%- endblock form_widget_compound -%}
-", "form_table_layout.html.twig", "/Users/patrykjugowiec/Desktop/server/vendor/symfony/twig-bridge/Resources/views/Form/form_table_layout.html.twig");
+", "form_table_layout.html.twig", "/Users/patrykjugowiec/Desktop/Projekty/Katowice-app-sem-5/serverPhp/vendor/symfony/twig-bridge/Resources/views/Form/form_table_layout.html.twig");
     }
 }

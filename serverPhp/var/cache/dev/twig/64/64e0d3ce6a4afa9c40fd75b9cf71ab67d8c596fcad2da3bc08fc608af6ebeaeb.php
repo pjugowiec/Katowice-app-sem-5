@@ -71,6 +71,6 @@ class __TwigTemplate_13716fe968777fdecfd5103528cf8c8103dfa1e374a44de4dbbfebd68dc
     public function getSourceContext()
     {
         return new Source("{% extends \"@email/zurb_2/notification/body.html.twig\" %}
-", "@email/default/notification/body.html.twig", "/Users/patrykjugowiec/Desktop/server/vendor/symfony/twig-bridge/Resources/views/Email/default/notification/body.html.twig");
+", "@email/default/notification/body.html.twig", "/Users/patrykjugowiec/Desktop/Projekty/Katowice-app-sem-5/serverPhp/vendor/symfony/twig-bridge/Resources/views/Email/default/notification/body.html.twig");
     }
 }

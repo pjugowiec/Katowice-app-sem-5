@@ -227,6 +227,6 @@ class __TwigTemplate_a1c14035b1ebe75a75b58347d590b1a1ea5a9d2d4369e0ca16c49e3ed80
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/exception.html.twig", "/Users/patrykjugowiec/Desktop/server/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
+", "@WebProfiler/Collector/exception.html.twig", "/Users/patrykjugowiec/Desktop/Projekty/Katowice-app-sem-5/serverPhp/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
     }
 }

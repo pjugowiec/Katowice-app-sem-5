@@ -1671,6 +1671,6 @@ class __TwigTemplate_6df7f2a37ef93e7a9df80c85990117ccca7fb249f43bfd09ff87626d982
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/Users/patrykjugowiec/Desktop/server/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/Users/patrykjugowiec/Desktop/Projekty/Katowice-app-sem-5/serverPhp/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
     }
 }

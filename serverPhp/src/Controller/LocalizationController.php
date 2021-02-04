@@ -29,11 +29,10 @@ class LocalizationController extends ApiController
     /**
      * @Route("/api/localization", methods="POST")
      * @param Request $request
-     * @param LocalitzationRepository $localizationRepository
      * @param EntityManagerInterface $em
      * @return mixed
      */
-    public function createLocalization(Request $request, LocalitzationRepository $localizationRepository, EntityManagerInterface $em)
+    public function createLocalization(Request $request, EntityManagerInterface $em)
     {
         $request = $this->transformJsonBody($request);
 
@@ -59,7 +58,6 @@ class LocalizationController extends ApiController
 
     /**
      * @param $id
-     * @param Request $request
      * @param LocalitzationRepository $localizationRepository
      * @param EntityManagerInterface $em
      * @return Symfony\Component\HttpFoundation\JsonResponse|JsonResponse
@@ -84,9 +82,9 @@ class LocalizationController extends ApiController
      * @param Request $request
      * @param LocalitzationRepository $localizationRepository
      * @param EntityManagerInterface $em
-     * @return Symfony\Component\HttpFoundation\JsonResponse
+     * @return Response
      */
-    public function updateLocalization($id, Request $request, LocalitzationRepository $localizationRepository, EntityManagerInterface $em): Symfony\Component\HttpFoundation\JsonResponse
+    public function updateLocalization($id, Request $request, LocalitzationRepository $localizationRepository, EntityManagerInterface $em): Response
     {
 
 

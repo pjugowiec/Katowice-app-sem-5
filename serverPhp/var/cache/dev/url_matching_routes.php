@@ -19,7 +19,10 @@ return [
             [['_route' => 'getAllLocalizations', '_controller' => 'App\\Controller\\LocalizationController::getAllLocalizations'], null, ['GET' => 0], null, false, false, null],
             [['_route' => 'createLocalization', '_controller' => 'App\\Controller\\LocalizationController::createLocalization'], null, ['POST' => 0], null, false, false, null],
         ],
-        '/api/project' => [[['_route' => 'getAllProjects', '_controller' => 'App\\Controller\\ProjectController::getAllProjects'], null, ['GET' => 0], null, false, false, null]],
+        '/api/project' => [
+            [['_route' => 'getAllProjects', '_controller' => 'App\\Controller\\ProjectController::getAllProjects'], null, ['GET' => 0], null, false, false, null],
+            [['_route' => 'createProject', '_controller' => 'App\\Controller\\ProjectController::createProject'], null, ['POST' => 0], null, false, false, null],
+        ],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -38,8 +41,13 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/api/localization/([^/]++)(?'
-                    .'|(*:198)'
+                .'|/api/(?'
+                    .'|project/([^/]++)(?'
+                        .'|(*:196)'
+                    .')'
+                    .'|localization/([^/]++)(?'
+                        .'|(*:229)'
+                    .')'
                 .')'
             .')/?$}sDu',
     ],
@@ -51,7 +59,11 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        198 => [
+        196 => [
+            [['_route' => 'updateProject', '_controller' => 'App\\Controller\\ProjectController::updateProject'], ['id'], ['PUT' => 0], null, false, true, null],
+            [['_route' => 'deleteProject', '_controller' => 'App\\Controller\\ProjectController::deleteProject'], ['id'], ['DELETE' => 0], null, false, true, null],
+        ],
+        229 => [
             [['_route' => 'deleteLocalization', '_controller' => 'App\\Controller\\LocalizationController::deleteLocalization'], ['id'], ['DELETE' => 0], null, false, true, null],
             [['_route' => 'updateLocalization', '_controller' => 'App\\Controller\\LocalizationController::updateLocalization'], ['id'], ['PUT' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],

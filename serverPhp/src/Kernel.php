@@ -35,4 +35,14 @@ class Kernel extends BaseKernel
             (require $path)($routes->withPath($path), $this);
         }
     }
+
+//    public function registerBundles()
+//    {
+//        $bundles = [
+//            // ...
+//            new Nelmio\CorsBundle\NelmioCorsBundle(),
+//            // ...
+//        ];
+//        // ...
+//    }
 }

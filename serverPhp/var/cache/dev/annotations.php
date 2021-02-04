@@ -73,19 +73,37 @@ return [[
 '%5B%5BC%5DApp%5CController%5CApiController%23respondWithErrors%5D%5B1%5D' => 2,
 '%5BApp%5CController%5CApiController%23respondUnauthorized%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CController%5CApiController%23respondUnauthorized%5D%5B1%5D' => 2,
+'%5BApp%5CController%5CApiController%23transformJsonBody%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CController%5CApiController%23transformJsonBody%5D%5B1%5D' => 2,
+'%5BApp%5CController%5CApiController%23respondCreated%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CController%5CApiController%23respondCreated%5D%5B1%5D' => 2,
+'%5BApp%5CController%5CApiController%23respondNotFound%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CController%5CApiController%23respondNotFound%5D%5B1%5D' => 2,
+'%5BApp%5CController%5CApiController%23respondValidationError%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CController%5CApiController%23respondValidationError%5D%5B1%5D' => 2,
 '%5BApp%5CController%5CApiController%24statusCode%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CController%5CApiController%24statusCode%5D%5B1%5D' => 2,
 '%5BApp%5CController%5CLocalizationController%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CController%5CLocalizationController%5D%5B1%5D' => 2,
-'%5BApp%5CController%5CLocalizationController%23getAllLocalizations%5D%5B1%5D' => 1,
+'%5BApp%5CController%5CLocalizationController%23getAllLocalizations%5D%5B1%5D' => 3,
 '%5B%5BC%5DApp%5CController%5CLocalizationController%23getAllLocalizations%5D%5B1%5D' => 2,
-'%5BApp%5CController%5CLocalizationController%23createLocalization%5D%5B1%5D' => 3,
+'%5BApp%5CController%5CLocalizationController%23createLocalization%5D%5B1%5D' => 4,
 '%5B%5BC%5DApp%5CController%5CLocalizationController%23createLocalization%5D%5B1%5D' => 2,
+'%5BApp%5CController%5CLocalizationController%23deleteLocalization%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CController%5CLocalizationController%23deleteLocalization%5D%5B1%5D' => 2,
+'%5BApp%5CController%5CLocalizationController%23updateLocalization%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CController%5CLocalizationController%23updateLocalization%5D%5B1%5D' => 2,
 '%5BApp%5CController%5CProjectController%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CController%5CProjectController%5D%5B1%5D' => 2,
 '%5BApp%5CController%5CProjectController%23getAllProjects%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CController%5CProjectController%23getAllProjects%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CLocalization%5D%5B1%5D' => 4,
+'%5BApp%5CController%5CProjectController%23createProject%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CController%5CProjectController%23createProject%5D%5B1%5D' => 2,
+'%5BApp%5CController%5CProjectController%23updateProject%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CController%5CProjectController%23updateProject%5D%5B1%5D' => 2,
+'%5BApp%5CController%5CProjectController%23deleteProject%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CController%5CProjectController%23deleteProject%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CLocalization%5D%5B1%5D' => 5,
 '%5B%5BC%5DApp%5CEntity%5CLocalization%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CLocalization%23__construct%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CLocalization%23__construct%5D%5B1%5D' => 2,
@@ -105,15 +123,23 @@ return [[
 '%5B%5BC%5DApp%5CEntity%5CLocalization%23getCoordinates%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CLocalization%23setCoordinates%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CLocalization%23setCoordinates%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CLocalization%24id%5D%5B1%5D' => 5,
+'%5BApp%5CEntity%5CLocalization%23getProjects%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CLocalization%23getProjects%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CLocalization%23addProject%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CLocalization%23addProject%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CLocalization%23removeProject%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CLocalization%23removeProject%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CLocalization%24id%5D%5B1%5D' => 6,
 '%5B%5BC%5DApp%5CEntity%5CLocalization%24id%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CLocalization%24city%5D%5B1%5D' => 6,
+'%5BApp%5CEntity%5CLocalization%24city%5D%5B1%5D' => 7,
 '%5B%5BC%5DApp%5CEntity%5CLocalization%24city%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CLocalization%24district%5D%5B1%5D' => 6,
+'%5BApp%5CEntity%5CLocalization%24district%5D%5B1%5D' => 7,
 '%5B%5BC%5DApp%5CEntity%5CLocalization%24district%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CLocalization%24coordinates%5D%5B1%5D' => 6,
+'%5BApp%5CEntity%5CLocalization%24coordinates%5D%5B1%5D' => 7,
 '%5B%5BC%5DApp%5CEntity%5CLocalization%24coordinates%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CProject%5D%5B1%5D' => 7,
+'%5BApp%5CEntity%5CLocalization%24projects%5D%5B1%5D' => 8,
+'%5B%5BC%5DApp%5CEntity%5CLocalization%24projects%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CProject%5D%5B1%5D' => 9,
 '%5B%5BC%5DApp%5CEntity%5CProject%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CProject%23__construct%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CProject%23__construct%5D%5B1%5D' => 2,
@@ -127,12 +153,18 @@ return [[
 '%5B%5BC%5DApp%5CEntity%5CProject%23getDescription%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CProject%23setDescription%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CProject%23setDescription%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CProject%24id%5D%5B1%5D' => 5,
+'%5BApp%5CEntity%5CProject%23getLocalization%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CProject%23getLocalization%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CProject%23setLocalization%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CProject%23setLocalization%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CProject%24id%5D%5B1%5D' => 6,
 '%5B%5BC%5DApp%5CEntity%5CProject%24id%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CProject%24name%5D%5B1%5D' => 6,
+'%5BApp%5CEntity%5CProject%24name%5D%5B1%5D' => 7,
 '%5B%5BC%5DApp%5CEntity%5CProject%24name%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CProject%24description%5D%5B1%5D' => 6,
+'%5BApp%5CEntity%5CProject%24description%5D%5B1%5D' => 7,
 '%5B%5BC%5DApp%5CEntity%5CProject%24description%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CProject%24localization%5D%5B1%5D' => 10,
+'%5B%5BC%5DApp%5CEntity%5CProject%24localization%5D%5B1%5D' => 2,
 '%5BDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%5D%5B1%5D' => 1,
 '%5B%5BC%5DDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%5D%5B1%5D' => 2,
 '%5BDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%23setContainer%5D%5B1%5D' => 1,
@@ -674,8 +706,32 @@ return [[
 
 0 => 'N;',
 1 => [],
-2 => 1612014403,
+2 => 1612378362,
 3 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/api/localization',
+                ],
+                'methods' => [
+                    [
+                        'GET',
+                    ],
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+4 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -699,7 +755,7 @@ return [[
         []
     );
 },
-4 => static function () {
+5 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
@@ -718,7 +774,7 @@ return [[
         []
     );
 },
-5 => static function () {
+6 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Id'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Id')),
@@ -741,7 +797,7 @@ return [[
         []
     );
 },
-6 => static function () {
+7 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
@@ -760,7 +816,34 @@ return [[
         []
     );
 },
-7 => static function () {
+8 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\OneToMany'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\OneToMany')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'mappedBy' => [
+                    'localization',
+                ],
+                'targetEntity' => [
+                    'App\\Entity\\Project',
+                ],
+                'cascade' => [
+                    [
+                        'persist',
+                    ],
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+9 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
@@ -775,6 +858,36 @@ return [[
         ],
         [
             $o[0],
+        ],
+        []
+    );
+},
+10 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ManyToOne'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ManyToOne')),
+            clone ($p['Doctrine\\ORM\\Mapping\\JoinColumn'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\JoinColumn')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'targetEntity' => [
+                    'App\\Entity\\Localization',
+                ],
+                'inversedBy' => [
+                    'projects',
+                ],
+                'name' => [
+                    1 => 'localization_id',
+                ],
+                'nullable' => [
+                    1 => false,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+            $o[1],
         ],
         []
     );

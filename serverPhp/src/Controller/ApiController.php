@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class ApiController
 {
 
+
     /**
      * @var integer HTTP status code - 200 (OK) by default
      */
@@ -117,6 +118,18 @@ class ApiController
     public function respondNotFound($message = 'Not found!')
     {
         return $this->setStatusCode(404)->respondWithErrors($message);
+    }
+
+    /**
+     * Returns a 422 Unprocessable Entity
+     *
+     * @param string $message
+     *
+     * @return Symfony\Component\HttpFoundation\JsonResponse
+     */
+    public function respondValidationError($message = 'Validation errors')
+    {
+        return $this->setStatusCode(422)->respondWithErrors($message);
     }
 
 
